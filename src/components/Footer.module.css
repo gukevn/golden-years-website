@@ -1,0 +1,40 @@
+.footer {
+  background: var(--gold);
+  color: var(--ink);
+  padding: 4.2rem 1.5rem 3rem;
+  text-align: center;
+}
+
+.inner {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr 1.4fr;
+  margin: 0 auto 2.8rem;
+  max-width: 950px;
+  text-align: left;
+}
+
+.footer h2 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 0 0 1rem;
+}
+
+.footer a,
+.footer p {
+  display: block;
+  font-size: 0.92rem;
+  margin: 0.38rem 0;
+}
+
+.social,
+.copy {
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  .inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}

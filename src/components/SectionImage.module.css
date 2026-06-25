@@ -1,0 +1,10 @@
+.figure {
+  line-height: 0;
+  margin: 0 auto;
+  width: min(94vw, 100%);
+}
+
+.figure img {
+  height: auto;
+  width: 100%;
+}

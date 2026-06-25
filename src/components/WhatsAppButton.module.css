@@ -1,0 +1,29 @@
+.button {
+  align-items: center;
+  animation: pulse 2.8s ease-in-out infinite;
+  background: #37d267;
+  border-radius: 999px;
+  bottom: 1.45rem;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.2);
+  color: white;
+  display: flex;
+  font-family: Arial, sans-serif;
+  font-size: 1.5rem;
+  height: 58px;
+  justify-content: center;
+  position: fixed;
+  right: 1.45rem;
+  text-decoration: none;
+  width: 58px;
+  z-index: 40;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.06);
+  }
+}

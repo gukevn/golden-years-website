@@ -1,0 +1,26 @@
+.button {
+  align-items: center;
+  border: 1px solid var(--ink);
+  display: inline-flex;
+  font-size: 0.92rem;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0.6rem 1.25rem;
+  text-decoration: none;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.button:hover {
+  box-shadow: 0 8px 18px rgba(0, 47, 63, 0.18);
+  transform: translateY(-1px);
+}
+
+.primary {
+  background: var(--ink);
+  color: var(--white);
+}
+
+.light {
+  background: var(--gold);
+  color: var(--ink);
+}

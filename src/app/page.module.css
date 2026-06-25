@@ -1,0 +1,160 @@
+.page {
+  background: var(--paper);
+}
+
+.banner {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  min-height: 360px;
+}
+
+.bannerTitle {
+  align-items: center;
+  background: var(--gold);
+  display: flex;
+  justify-content: center;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.bannerTitle p {
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.bannerTitle h1 {
+  font-size: clamp(2rem, 4vw, 3.3rem);
+  font-weight: 400;
+  line-height: 1;
+  margin: 0.25rem 0;
+}
+
+.bannerText {
+  align-items: center;
+  background: var(--ink);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  justify-content: center;
+  line-height: 1.65;
+  padding: 3rem clamp(2rem, 6vw, 6rem);
+}
+
+.section {
+  padding: 3.5rem 1rem;
+  text-align: center;
+}
+
+.gold {
+  background: var(--gold);
+}
+
+.cards {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 2rem auto;
+  max-width: 980px;
+}
+
+.card,
+.careCard,
+.miniCard {
+  background: var(--ink);
+  color: white;
+  box-shadow: var(--shadow);
+}
+
+.card {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 470px;
+  padding-bottom: 1rem;
+}
+
+.card img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  width: 100%;
+}
+
+.card h3,
+.careCard h3,
+.miniCard h3 {
+  font-weight: 400;
+}
+
+.card p {
+  line-height: 1.55;
+  padding: 0 1.2rem;
+}
+
+.careGrid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 2rem auto;
+  max-width: 720px;
+}
+
+.careCard {
+  min-height: 88px;
+  padding: 1rem;
+}
+
+.philosophy,
+.life {
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 2rem auto;
+  max-width: 900px;
+}
+
+.miniCard {
+  padding: 1.3rem;
+}
+
+.faq {
+  margin: 1rem auto;
+  max-width: 900px;
+  text-align: left;
+}
+
+.faq details {
+  border-bottom: 1px solid var(--line);
+  padding: 1rem 0;
+}
+
+.faq summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.faq p {
+  color: var(--ink-soft);
+  line-height: 1.65;
+}
+
+.choice {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem auto 0;
+}
+
+@media (max-width: 760px) {
+  .banner,
+  .cards,
+  .careGrid,
+  .philosophy,
+  .life {
+    grid-template-columns: 1fr;
+  }
+
+  .choice {
+    align-items: center;
+    flex-direction: column;
+  }
+}

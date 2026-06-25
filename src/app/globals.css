@@ -1,0 +1,56 @@
+:root {
+  --ink: #002f3f;
+  --ink-soft: #244a56;
+  --gold: #e9d9a1;
+  --gold-dark: #d4b95e;
+  --paper: #f8f8f7;
+  --white: #ffffff;
+  --line: #dfcf93;
+  --shadow: 0 16px 34px rgba(0, 37, 50, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+main {
+  overflow: hidden;
+}
+
+.sr-only {
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
