@@ -22,14 +22,17 @@
 }
 
 .logo {
-  display: block;
+  align-items: center;
+  display: inline-flex;
   flex: 0 0 auto;
+  height: 108px;
   line-height: 0;
+  margin-left: -0.35rem;
 }
 
 .logo img {
   display: block;
-  height: clamp(80px, 8.55vw, 96px);
+  height: clamp(98px, 10.2vw, 112px);
   object-fit: contain;
   width: auto;
 }
@@ -132,7 +135,7 @@
   }
 
   .logo img {
-    height: clamp(74px, 8.1vw, 90px);
+    height: clamp(90px, 9.8vw, 106px);
   }
 
   .nav {
@@ -151,7 +154,7 @@
   }
 
   .logo img {
-    height: 66px;
+    height: 78px;
   }
 
   .menuButton {
