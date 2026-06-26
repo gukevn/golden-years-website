@@ -12,8 +12,8 @@ const slides = [
   "/assets/hero-carousel/sarchi-outing.png"
 ];
 
-const visibleDurationMs = 3000;
-const transitionDurationMs = 2500;
+const visibleDurationMs = 4000;
+const transitionDurationMs = 4000;
 
 export function Carousel() {
   const [index, setIndex] = useState(0);
