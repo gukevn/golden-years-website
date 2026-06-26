@@ -2,8 +2,9 @@
   align-items: center;
   border: 1px solid var(--ink);
   display: inline-flex;
-  font-size: 0.92rem;
   justify-content: center;
+  gap: 1rem;
+  font-size: 1.05rem;
   min-height: 40px;
   padding: 0.6rem 1.25rem;
   text-decoration: none;

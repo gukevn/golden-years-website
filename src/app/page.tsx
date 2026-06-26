@@ -22,13 +22,17 @@ export default function Home() {
         </div>
         <div className={styles.bannerText}>
           <p>
-            En Golden Years, comprendemos profundamente que cada etapa de la madurez merece vivirse plenamente y con atención significativa.
+            En Golden Years, comprendemos profundamente que cada etapa de la madurez conlleva retos particulares y deseos específicos. Por ello, nos enfocamos con exclusividad en la atención integral de la salud del Adulto Mayor, creando un refugio de seguridad, calidez y plenitud para todos nuestros residentes. Sabemos que encomendar a un ser querido a terceros representa una de las decisiones más sensibles para cualquier familia.
           </p>
           <p>
-            Por ello, nos esforzamos en crear un entorno cálido, seguro y humano, donde nuestros residentes reciben acompañamiento cercano y personalizado.
+            Nuestra misión es otorgar esa serenidad y respaldo emocional que ustedes necesitan. Permanecemos a su lado para guiarles, esclarecer sus dudas y procurar que cada núcleo familiar se sienta plenamente integrado en nuestra afectuosa comunidad.
           </p>
-          <Button href={whatsappUrl}>Hablar por WhatsApp con un asesor</Button>
         </div>
+      </section>
+      <section className={styles.bannerButton}>
+        <Button href={whatsappUrl}>
+          Hablar por WhatsApp con un asesor
+        </Button>
       </section>
 
       <section className={styles.section}>
