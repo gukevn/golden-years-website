@@ -8,8 +8,18 @@ type Props = {
 };
 
 export function Button({ children, href, variant = "primary" }: Props) {
+  const className = `${styles.button} ${styles[variant]}`;
+
+  if (href.startsWith("http")) {
+    return (
+      <a className={className} href={href} target="_blank" rel="noreferrer">
+        {children}
+      </a>
+    );
+  }
+
   return (
-    <Link className={`${styles.button} ${styles[variant]}`} href={href}>
+    <Link className={className} href={href}>
       {children}
     </Link>
   );
