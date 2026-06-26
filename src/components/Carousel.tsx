@@ -1,25 +1,32 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "./Carousel.module.css";
 
 const slides = [
-  "/assets/brand/hero-facility.jpg",
-  "/assets/brand/hero-doc-2.jpg",
-  "/assets/brand/hero-doc-3.jpg",
-  "/assets/brand/hero-doc-4.jpg"
+  "/assets/hero-carousel/facility-garden.jpeg",
+  "/assets/hero-carousel/facility-corridor.jpg",
+  "/assets/hero-carousel/facility-patio.jpg",
+  "/assets/hero-carousel/residence-dog.jpg",
+  "/assets/hero-carousel/sarchi-outing.png"
 ];
+
+const visibleDurationMs = 3000;
+const transitionDurationMs = 2500;
 
 export function Carousel() {
   const [index, setIndex] = useState(0);
+  const hasStarted = useRef(false);
 
   useEffect(() => {
-    const timer = window.setInterval(() => {
+    const delay = hasStarted.current ? visibleDurationMs + transitionDurationMs : visibleDurationMs;
+    const timer = window.setTimeout(() => {
+      hasStarted.current = true;
       setIndex((current) => (current + 1) % slides.length);
-    }, 3000);
-    return () => window.clearInterval(timer);
-  }, []);
+    }, delay);
+    return () => window.clearTimeout(timer);
+  }, [index]);
 
   const move = (direction: 1 | -1) => {
     setIndex((current) => (current + direction + slides.length) % slides.length);
@@ -30,7 +37,13 @@ export function Carousel() {
       <div className={styles.track} style={{ transform: `translateX(-${index * 100}%)` }}>
         {slides.map((slide) => (
           <div className={styles.slide} key={slide}>
-            <Image src={slide} alt="Instalaciones de Golden Years" fill priority sizes="100vw" />
+            <Image
+              src={slide}
+              alt="Instalaciones y vida en Golden Years"
+              fill
+              priority={slide === slides[0]}
+              sizes="100vw"
+            />
           </div>
         ))}
       </div>
